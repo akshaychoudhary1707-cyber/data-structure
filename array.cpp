@@ -33,5 +33,9 @@ int main() {
         arr[i]=arr[i+1];
     }
     n--;
+    cout << "Array after deletion is " << endl;
+    for(int i=0;i<n;i++) {
+        cout << arr[i] << " ";
+    }
     return x;
 }

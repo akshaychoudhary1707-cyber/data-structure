@@ -19,8 +19,10 @@ int* CountingSort(int arr[], int n) {
 
 int main() {
     int n;
+    cout << "Enter the number of elements in array: ";
     cin >> n;
     int arr[n];
+    cout << "Enter the elements of array: ";
     for (int i=0;i<n;i++) {
         cin >> arr[i];
     }

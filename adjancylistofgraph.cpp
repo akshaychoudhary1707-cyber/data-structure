@@ -24,6 +24,7 @@ int main() {
         }
         cout << endl;
     }
+    cout << "BFS is:- " << endl;
     queue<int> Q;
     vector<int> visited(V,0);
     Q.push(0);
@@ -40,4 +41,30 @@ int main() {
             }
         }
     }
+    cout<<endl;
+
+    cout << "Shortest path using BFS:- " << endl;
+    queue<int> Q1;
+    vector<int> status(V,-1);
+    Q1.push(0);
+    status[0]=0;
+    while(!Q1.empty()) {
+        int x=Q1.front();
+        Q1.pop();
+        for (int i=0;i<Adj[x].size();i++) {
+            int y=Adj[x][i];
+            if(status[y]==-1) {
+                status[y]=status[x]+1;
+                Q1.push(Adj[x][i]);
+            }
+        }
+    }
+    for (int i=0;i<V;i++) {
+        cout<<i<<" : ";
+        cout<<status[i];
+        cout<<endl;
+    }
 }
+
+/*lokah*/
+
